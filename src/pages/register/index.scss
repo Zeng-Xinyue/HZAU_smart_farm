@@ -1,0 +1,37 @@
+.P-register {
+    background-color: rgb(245, 245, 245);
+    min-height: 48vh;
+
+    .P-register-main {
+        width: 70vw;
+        margin: 0 auto;
+        height: 70vh;
+
+        .P-register-main-top {
+            display: flex;
+            justify-content: space-between;
+
+            .P-register-main-welcome {
+                height: 14vh;
+                line-height: 14vh;
+                font-size: 2.8vh;
+            }
+
+            .P-register-main-process {
+                width: 40vw;
+                height: 14vh;
+                position: relative;
+
+                .site-navigation-steps {
+                    width: 35vw;
+                }
+            }
+        }
+        .P-register-main-bottom{
+            height: 60vh;
+            position: relative;
+        }
+
+
+    }
+}

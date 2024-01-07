@@ -1,0 +1,30 @@
+.P-quick-consultation{
+    height: 88vh;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+}
+.P-quick-consultation-main{
+    width: 50vw;
+    position: absolute;
+    top: 7vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.P-quick-consultation-chat{
+    background-color: white;
+    border-radius: 1vh;
+    height: 60vh;
+    .P-quickconsultation-chattit{
+        height: 7vh;
+        line-height: 7vh;
+        text-align: center;
+        font-size: 3vh;
+    }
+}
+.P-quick-consultation-process{
+    height: 10vh;
+    line-height: 10vh;
+    background-color: rgb(255, 255, 255);
+    margin: 5vh 0 0;
+    position: relative;
+}

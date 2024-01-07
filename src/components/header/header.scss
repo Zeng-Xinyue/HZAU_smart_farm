@@ -1,0 +1,64 @@
+.M-header {
+    background-color: #ffffffd2;
+    height: 12vh;
+}
+
+.M-header-top {
+    height: 4vh;
+    background-color: #f1f1f1d2;
+    text-align: center;
+
+    .M-header-top-main {
+        width: 80vw;
+        height: 4vh;
+        line-height: 4vh;
+        font-size: 1.6vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .M-header-top-left {
+            width: 30vw;
+            display: flex;
+            justify-content: space-around ;
+            align-items: center;
+        }
+
+        .M-header-top-right {
+            display: flex;
+            width: 10vw;
+            justify-content: space-around ;
+            align-items: center;
+        }
+    }
+}
+
+.M-header-bottom {
+    height: 8vh;
+
+    .M-header-bottom-main {
+        width: 80vw;
+        margin: 0 auto;
+        height: 8vh;
+        line-height: 8vh;
+        font-size: 2.2vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .M-header-bottom-main-item{
+            height: 8vh;
+            button{
+                width: 8vw;
+                height: 5vh;
+                font-size: 2vh;
+            }
+        }
+        .M-header-logo{
+            height: 8vh;
+            width: 13vh;
+        }
+    }
+}
+a:hover{
+    color: #1890ff;
+}

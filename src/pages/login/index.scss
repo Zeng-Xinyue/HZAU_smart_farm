@@ -1,0 +1,124 @@
+.P-login {
+    position: relative;
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 88vh;
+        width: 100%;
+        background-image: url('@/common/image/login_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+
+    .P-login-containter {
+        position: absolute;
+        left: 50vw;
+        top: 45vh;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 65vh;
+        background-color: rgb(255, 255, 255);
+
+        .P-login-cancel {
+            display: block;
+            width: 10vh;
+            height: 10vh;
+            border-radius: 0 0 0 100%;
+            background-color: rgb(49, 200, 247);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 999;
+
+            svg {
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translate(60%, -60%);
+                width: 5vh;
+                height: 5vh;
+                color: #ffffff;
+            }
+
+            &:hover {
+                background-color: rgb(87, 230, 255);
+
+                svg {
+                    color: #b4b4b4;
+                }
+            }
+        }
+
+        .P-login-left {
+            display: inline-block;
+            width: 35vw;
+            height: 65vh;
+            position: relative;
+
+            .ant-carousel {
+                height: 65vh;
+                width: 35vw;
+            }
+            .slick-dots-bottom li {
+                background-color: #080808;
+              }
+
+            .P-login-left-img {
+                height: 65vh;
+                display: block;
+                padding: 2.5vh 4vw;
+            }
+        }
+
+        .P-login-right {
+            width: 35vw;
+            height: 65vh;
+            display: inline-block;
+            position: relative;
+
+            .P-login-form {
+                width: 70%;
+                height: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .P-login-form-tit {
+                    height: 4vh;
+                    line-height: 4vh;
+                    font-size: 3vh;
+                    font-weight: 600;
+                    text-align: left;
+
+                    div {
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                    }
+
+                    .P-login-form-tit1 {
+                        border-right: 1px #c2c2c2 solid;
+                    }
+
+                    .P-login-form-tit2 {
+                        border-left: 1px #c2c2c2 solid;
+                    }
+
+                    .active {
+                        color: rgb(40, 133, 255);
+                        ;
+                    }
+                }
+
+                .P-login-form-type {
+                    height: calc(100% - 4vh);
+                }
+            }
+        }
+    }
+}

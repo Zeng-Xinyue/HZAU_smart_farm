@@ -1,0 +1,78 @@
+.P-main-span1 {
+    width: 100%;
+    height: 68vh;
+    background-color: #f2f2f2;
+    padding: 4vh 0;
+}
+
+.P-main-span1-main {
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.P-span1-left {
+    width: 23vw;
+    height: 60vh;
+    background-color: rgb(242, 253, 249);
+
+}
+
+.P-span1-swapper {
+    width: 30vw;
+    height: 40vh;
+    background-color: rgb(233, 233, 250);
+    position: absolute;
+    top: 0;
+    left: 25vw;
+}
+
+.P-span1-right {
+    width: 23vw;
+    height: 40vh;
+    background-color: rgb(237, 224, 250);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.P-span1-bottom {
+    width: 55vw;
+    height: 18vh;
+    background-color: rgb(233, 245, 255);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .P-span1-bottom-item {
+        width: 15vw;
+        height: 15vh;
+
+        .P-span1-bottom-item-name {
+            width: 6vw;
+            height: 8vh;
+            line-height: 8vh;
+            font-size: 3vh;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .P-span1-bottom-item-tit {
+            width: 9vw;
+            height: 8vh;
+            line-height: 8vh;
+            font-size: 2.5vh;
+            display: inline-block;
+        }
+
+        .P-span1-bottom-item-phone {
+            height: 7vh;
+            line-height: 7vh;
+            padding-left: 1vw;
+            font-size: 2vh;
+        }
+    }
+}

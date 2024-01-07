@@ -1,0 +1,51 @@
+.P-step2-peruser {
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+    .P-step2-bg {
+        height: 50vh;
+        position: absolute;
+        left: 0;
+
+        img {
+            height: 40vh;
+            display: block;
+            margin: 5vh;
+        }
+    }
+
+    .register-form {
+        margin-top: 5vh;
+        width: 20vw;
+        position: absolute;
+        right: 5vw;
+
+        .form-item {
+            height: 4vh;
+            line-height: 4vh;
+            font-size: 1.8vh;
+        }
+
+        .register-form-button {
+            width: 16vw;
+            height: 4.5vh;
+            line-height: 4.5vh;
+            font-size: 1.8vh;
+            padding: 0;
+            margin: 0 10%;
+        }
+
+        .P-register-immediately-login {
+            text-align: center;
+
+            a {
+                font-size: 2vh;
+            }
+        }
+    }
+}

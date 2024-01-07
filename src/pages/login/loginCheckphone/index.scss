@@ -1,0 +1,47 @@
+.P-login-checkphone {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10% 0;
+    position: relative;
+
+    .form-item {
+        height: 4vh;
+        line-height: 4vh;
+        font-size: 1.8vh;
+    }
+
+    .P-checknum-input{
+        height: 5vh;
+        font-size: 1.8vh;
+    }
+
+    .P-checknum-btn {
+        height: 5vh;
+        line-height: 5vh;
+        font-size: 1.8vh;
+        padding: 0;
+        width: 40%;
+    }
+
+    .login-form-button {
+        width: 16vw;
+        height: 100%;
+        line-height: 4.5vh;
+        font-size: 1.8vh;
+        padding: 0;
+        margin: 3vh 10%;
+    }
+
+    .login-form-forgot {
+        font-size: 1.4vh;
+    }
+
+    .P-login-immediately-signup {
+        display: block;
+        font-size: 1.4vh;
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+    }
+}

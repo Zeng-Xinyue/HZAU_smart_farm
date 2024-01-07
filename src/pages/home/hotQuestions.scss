@@ -1,0 +1,17 @@
+.P-hot-questions {
+    height: 60vh;
+    padding: 4vh 0;
+    background-color: #f2f2f2;
+
+    .P-hot-questions-main {
+        width: 80vw;
+        margin: 0 auto;
+
+        .P-hot-questions-tit {
+            height: 15vh;
+            line-height: 15vh;
+            font-size: 3vh;
+            padding-left: 4vh;
+        }
+    }
+}

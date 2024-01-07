@@ -1,0 +1,31 @@
+.P-login-username {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10% 0;
+    position: relative;
+
+    .form-item {
+        height: 4vh;
+        line-height: 4vh;
+        font-size: 1.8vh;
+
+    }
+
+    .login-form-button {
+        width: 16vw;
+        height: 4.5vh;
+        line-height: 4.5vh;
+        font-size: 1.8vh;
+        padding: 0;
+        margin: 3vh 10%;
+    }
+
+    .P-login-immediately-signup {
+        display: block;
+        font-size: 1.4vh;
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+    }
+}
