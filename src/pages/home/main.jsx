@@ -8,8 +8,8 @@ function Main(){
     return (
         <div className="P-main">
                 <MainSpan1></MainSpan1>
-                <ExpertsRecommend></ExpertsRecommend>
                 <HotQuestions></HotQuestions>
+                <ExpertsRecommend></ExpertsRecommend>
                 <KnowledgePopularization></KnowledgePopularization>
         </div>
     )

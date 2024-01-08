@@ -1,6 +1,7 @@
 .P-experts-recommend {
     height: 90vh;
     padding: 4vh 0;
+    background-color: #f2f2f2;
 }
 
 .P-experts-recommend-main {
@@ -11,12 +12,12 @@
 .P-experts-recommend-tit {
     height: 12vh;
     line-height: 12vh;
-    font-size: 4vh;
+    font-size: 3vh;
     padding-left: 4vh;
 }
 
 .P-experts-recommend-list {
-    height: 60vh;
+    height: 65vh;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -42,18 +43,18 @@
         position: absolute;
         bottom: 0;
         border-top: 0.5vh solid rgba(85, 26, 26, 0.726);
-        background-color: aliceblue;
+        background-color: #fff;
         transition: height 0.5s;
-        box-shadow: 0 0 20px rgba(0,0,0,.08);
-        
-        &:hover{
+        box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+
+        &:hover {
             height: 35vh;
         }
 
         .P-experts-recommend-item-name {
             height: 8vh;
             line-height: 8vh;
-            font-size: 3vh;
+            font-size: 2.5vh;
         }
 
         .P-experts-recommend-item-place {
@@ -75,11 +76,13 @@
 
         .P-experts-recommend-item-info-tit {
             padding: 0 2vw;
-            height: 10vh;
+            height: 7.5vh;
+            margin-bottom: 2.5vh;
+            box-sizing: content-box;
             line-height: 2.5vh;
             font-size: 2vh;
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -87,10 +90,9 @@
         }
 
         .P-experts-recommend-item-btn {
-            margin: 1vh 0 1vh;
-
+            margin: 3vh 0 1vh;
             button {
-                width: 5vw;
+                width: 6vw;
                 height: 4vh;
                 line-height: 4vh;
                 padding: 0;

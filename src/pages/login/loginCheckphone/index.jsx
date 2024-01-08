@@ -12,8 +12,6 @@ function LoginCheckPhone() {
         const formData = form.getFieldsValue();
         if (!formData.phone) {
             showMessage({type:'warning',content:"手机号不能为空"})
-        } else {
-
         }
     }
 

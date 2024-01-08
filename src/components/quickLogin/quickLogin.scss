@@ -1,0 +1,57 @@
+.C-modal-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .ant-modal-content{
+        width: 25vw;
+        font-size: 2vh;
+    }
+
+    .ant-modal-title {
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .C-quickLogin {
+        width: 17vw;
+        height: 30vh;
+        margin: 1vh auto;
+
+        padding: 3% 0;
+        position: relative;
+
+        .form-item {
+            height: 4vh;
+            line-height: 4vh;
+            font-size: 1.8vh;
+        }
+
+        .P-checknum-input {
+            height: 5vh;
+            font-size: 1.8vh;
+        }
+
+        .P-checknum-btn {
+            height: 5vh;
+            line-height: 5vh;
+            font-size: 1.6vh;
+            padding: 0;
+            width: 40%;
+        }
+
+        .login-form-button {
+            width: 16vw;
+            height: 100%;
+            line-height: 4.5vh;
+            font-size: 1.8vh;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .login-form-forgot {
+            font-size: 1.4vh;
+        }
+
+    }
+}

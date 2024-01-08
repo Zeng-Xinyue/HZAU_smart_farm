@@ -1,17 +1,49 @@
 import './index.scss'
 import { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom'
+import { Outlet,useLocation } from 'react-router-dom'
 import { Steps } from 'antd';
 import Footer from '@/components/footer/index.jsx';
 
 
 function Register() {
-    const [current, setCurrent] = useState(3);
-
-    const setCurrentStep = (index) => {
-        setCurrent(index)
-    };
-    console.log(typeof setCurrentStep)
+    const [current, setCurrent] = useState(0);
+    const steps = [
+        {
+            status: 'wait',
+            title: '选择会员类型',
+            key: 'step1',
+        },
+        {
+            status: 'wait',
+            title: '填写注册信息',
+            key: 'step2',
+        },
+        {
+            status: 'wait',
+            title: '注册成功',
+            key: 'step3',
+        },
+    ];
+    const items = steps.map((item) => ({key:item.key,title:item.title/* ,status:item.status */}));
+    const location = useLocation();
+    useEffect(() => {
+        const path = location.pathname;
+        console.log(path)
+        switch(path){
+            case '/register/step1':
+                setCurrent(0);
+                break;
+            case '/register/step2/peruser':
+                setCurrent(1);
+                break;
+            case '/register/step3':
+                setCurrent(2);
+                break;
+            default:
+                setCurrent(0);
+                break;
+        }
+    },[location.pathname])
 
 
     return (
@@ -24,20 +56,7 @@ function Register() {
                             <Steps
                                 current={current}
                                 className="site-navigation-steps"
-                                items={[
-                                    {
-                                        status: 'wait',
-                                        title: '选择会员类型',
-                                    },
-                                    {
-                                        status: 'wait',
-                                        title: '填写注册信息',
-                                    },
-                                    {
-                                        status: 'wait',
-                                        title: '注册成功',
-                                    },
-                                ]}
+                                items={items}
                             />
                         </div>
                     </div>

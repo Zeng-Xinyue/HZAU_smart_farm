@@ -1,21 +1,44 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import { Button, Checkbox, Form, Input,Select } from 'antd';
+import { Button, Checkbox, Form, Input, Select } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import showMessage from '@/components/message';
-import { farmerLogin } from '@/api/login.js'
+import { toLogin } from '@/api/login.js'
 import { goto } from '@/api';
-function LoginUsername() {
+import { useEffect } from 'react';
+import { passwordEncryption } from '@/utils/jsencrypt.js'
 
-    const onFinish = (values) => {
-        console.log(values)
-        farmerLogin({
+function LoginUsername() {
+    const [form] = Form.useForm();
+    useEffect(() => {
+        if (localStorage.getItem('remember')) {
+            form.setFieldsValue({
+                username: localStorage.getItem('username'),
+                password: localStorage.getItem('password'),
+                role: localStorage.getItem('role'),
+                remember: true,
+            });
+        }
+    },[]);
+
+    const onFinish = async(values) => {
+        // const enPassword = await passwordEncryption(values.password);
+        toLogin({
             "role": values.role,
             "phone": values.username,
-            "password": values.password
+            "password": /* enPassword */values.password,
         }).then(res => {
             if (res.code === 200) {
                 showMessage({ type: 'success', content: '登录成功！' });
+                //保存token
+                localStorage.setItem('tokenStorage', res.data.token)
+                //判断 “记住密码”
+                if (values.remember) {
+                    localStorage.setItem("username", values.username);
+                    localStorage.setItem("password", values.password);
+                    localStorage.setItem("remember", values.remember);
+                    localStorage.setItem("role", values.role);
+                }
                 goto('/')
             } else {
                 showMessage({ type: 'error', content: res.msg })
@@ -27,11 +50,9 @@ function LoginUsername() {
     return (
         <div className='P-login-username'>
             <Form
+                form={form}
                 name="normal_login"
                 className="login-form"
-                initialValues={{
-                    remember: false,
-                }}
                 onFinish={onFinish}
             >
                 <Form.Item
@@ -61,11 +82,19 @@ function LoginUsername() {
                     />
                 </Form.Item>
 
-                <Form.Item name="role">
+                <Form.Item name="role"
+                    rules={[
+                        {
+                            required: true,
+                            message: '请选择您的认证身份!',
+                        },
+                    ]}>
                     <Select
-                        
-                        defaultValue=""
                         className="form-item"
+                        style={{
+                            height: '4vh',
+                        }}
+                        placeholder="认证身份"
                         options={[
                             {
                                 value: '个人用户',
@@ -79,29 +108,26 @@ function LoginUsername() {
                                 value: '专家',
                                 label: '专家',
                             },
-                            // {
-                            //     value: 'disabled',
-                            //     label: 'Disabled',
-                            //     disabled: true,
-                            // },
                         ]}
                     />
                 </Form.Item>
 
                 <Form.Item name="remember" valuePropName="checked" noStyle>
-                    <Checkbox>记住密码</Checkbox>
-                    <a className="login-form-forgot" href="">
-                        忘记密码
-                    </a>
+                    <div>
+                        <Checkbox>记住密码</Checkbox>
+                        <a className="login-form-forgot">
+                            忘记密码
+                        </a>
+                    </div>
                 </Form.Item>
 
-
-
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
-                        登录
-                    </Button>
-                    <Link className='P-login-immediately-signup' to={'/register'}>立即注册！</Link>
+                    <div>
+                        <Button type="primary" htmlType="submit" className="login-form-button">
+                            登录
+                        </Button>
+                        <Link className='P-login-immediately-signup' to={'/register'}>立即注册！</Link>
+                    </div>
                 </Form.Item>
             </Form>
         </div>

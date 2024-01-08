@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import { Button, Checkbox, Form, Input } from 'antd';
 import { LockOutlined, PhoneOutlined } from '@ant-design/icons';
 import bg from '@/common/image/chatrobot.png'
-
+import { goto } from '@/api';
+import showMessage from '@/components/message'
 import { toRegisteUser } from '@/api/register.js'
 
 function Step2PerUser() {
     const onFinish = (values) => {
-        console.log(values)
+        // console.log(values)
         toRegisteUser({
             "role": "农场主",
             "phone": values.username,
@@ -16,7 +17,9 @@ function Step2PerUser() {
         })
             .then(res => {
                 if (res.code === 200) {
-                    /* 跳转step3 */
+                    goto('/register/step3');
+                }else{
+                    showMessage({type:'warning',content:res.msg})
                 }
             })
             .catch(err => console.log(err))

@@ -1,5 +1,11 @@
 import {get,post,authRequest} from './index.js'
 
-export const farmerLogin = (body)=> {
+//登录
+export const toLogin = (body)=> {
     return post('/login',body);
+}
+
+//获取公钥
+export const getPublicKey = ()=> {
+    return get('/getPublicKey')
 }
