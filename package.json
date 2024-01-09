@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.12.5",
+    "antd-img-crop": "^4.21.0",
     "axios": "^1.6.3",
     "classnames": "^2.5.1",
     "http-proxy-middleware": "^2.0.6",

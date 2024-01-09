@@ -1,0 +1,73 @@
+.P-My{
+  position: absolute;
+  overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    padding:10vh 0;
+    background: linear-gradient(#f48c8d,#f4c58d);
+
+    .M-My{
+      width:90%;
+      margin:0 auto;
+      padding:2vh 0 ;
+      border-radius: 10px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+
+      .M-Mytop{
+        height:18vh;
+
+        .M-Mytoprow{
+          height: 100%;
+
+          .avatar-div{
+            height:100%;
+            padding-left:20%;
+            .avatar{
+              width: 8.5vw;
+
+            }
+          }
+          .M-usertips{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+          .M-userSetting{
+            height: 100%;
+            padding:0 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+          }
+        }
+
+      }
+      .M-Mymain{
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .M-leftNav{
+
+          width:25%;
+          height:100vh;
+
+        }
+        .M-maininfo{
+          border-radius: 10px;
+          padding:5%;
+          background-color: #ECECEC;
+          width:70%;
+
+        }
+      }
+
+    }
+}
+
+
+

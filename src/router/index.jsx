@@ -2,6 +2,7 @@ import { createHashRouter, Navigate } from 'react-router-dom';
 import { globalConfig } from '@/globalConfig'
 import Login from '@/pages/login';
 import Home from '@/pages/home';
+import My from '@/pages/My';
 import Entry from '@/pages/entry/entry';
 import QuickConsultation from '@/pages/quickConsultation'
 import LoginUsername from '@/pages/login/loginUsername';
@@ -26,6 +27,10 @@ export const globalRouters = createHashRouter([
                 path: '/home',
                 element: <Home></Home>
             },
+            {
+              path: '/my',
+              element: <My></My>
+          },
             {
                 path: '/quick_consultation',
                 element: <QuickConsultation></QuickConsultation>
