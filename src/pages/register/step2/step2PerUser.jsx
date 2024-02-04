@@ -6,20 +6,30 @@ import bg from '@/common/image/chatrobot.png'
 import { goto } from '@/api';
 import showMessage from '@/components/message'
 import { toRegisteUser } from '@/api/register.js'
+import JSEncrypt from 'jsencrypt';
+import { getPublicKey } from '@/api/login';
 
 function Step2PerUser() {
-    const onFinish = (values) => {
-        // console.log(values)
+    const onFinish = async (values) => {
+        let enPassword;
+        const encrypt = new JSEncrypt();
+        await getPublicKey().then((res) => {
+            const publicKey = res.msg;
+            encrypt.setPublicKey(publicKey)
+            enPassword = encrypt.encrypt(values.password)
+        }).catch(err => console.log(err))
+
         toRegisteUser({
             "role": "农场主",
             "phone": values.username,
-            "password": values.password
+            "password": enPassword
         })
             .then(res => {
                 if (res.code === 200) {
                     goto('/register/step3');
-                }else{
-                    showMessage({type:'warning',content:res.msg})
+
+                } else {
+                    showMessage({ type: 'warning', content: res.msg })
                 }
             })
             .catch(err => console.log(err))

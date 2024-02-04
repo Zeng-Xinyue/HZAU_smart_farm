@@ -15,18 +15,22 @@
     width: 23vw;
     height: 60vh;
     background-color: rgb(255, 255, 255);
-    .form{
+ 
+
+    .form {
         padding: 5vh 0 0;
         width: 15vw;
         margin: 0 auto;
         border-bottom: 0.3vh solid #f2f2f2;
-        .form-item{
+
+        .form-item {
             width: 100%;
             height: 4vh;
             line-height: 4vh;
             font-size: 1.8vh;
         }
-        button.form-item{
+
+        button.form-item {
             padding: 0;
             text-align: center;
         }
@@ -130,6 +134,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,4 +169,71 @@
             font-size: 2vh;
         }
     }
+=======
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+
+    .P-span1-bottom-left {
+        height: 18vh;
+    }
+
+    .P-span1-bottom-right-tit {
+        height: 6vh;
+        position: absolute;
+        top: 0;
+        left: 18vw;
+        font-size: 2.4vh;
+    }
+
+    .P-span1-bottom-right-text {
+        height: 12vh;
+        width: 38vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 2vh;
+        line-height: 3vh;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    // .P-span1-bottom-item {
+    //     width: 15vw;
+    //     height: 15vh;
+    //     background-image: url('@/common/image/Fenghua.png');
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     color: #fff;
+
+
+    //     .P-span1-bottom-item-name {
+    //         width: 6vw;
+    //         height: 8vh;
+    //         line-height: 8vh;
+    //         font-size: 3vh;
+    //         text-align: center;
+    //         display: inline-block;
+    //     }
+
+    //     .P-span1-bottom-item-tit {
+    //         width: 9vw;
+    //         height: 8vh;
+    //         line-height: 8vh;
+    //         font-size: 2.5vh;
+    //         display: inline-block;
+    //     }
+
+    //     .P-span1-bottom-item-phone {
+    //         height: 7vh;
+    //         line-height: 7vh;
+    //         padding-left: 1vw;
+    //         font-size: 2vh;
+    //     }
+    // }
+>>>>>>> 9005482 ('zxy新版本')
 }

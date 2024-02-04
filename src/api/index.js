@@ -1,5 +1,6 @@
 import axios from 'axios'
-import {globalRouters} from '@/router'
+
+import { globalRouters } from '@/router'
 
 const instance = axios.create({
     baseURL: '/api',

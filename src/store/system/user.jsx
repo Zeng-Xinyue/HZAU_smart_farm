@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import defaultImg from '@common/image/default.jpg'
+import defaultImg from '@/common/image/default.jpg'
 
 const tokenStorage = localStorage.getItem('tokenStorage')
 
@@ -10,15 +10,19 @@ const initialState = {
     token:tokenStorage?tokenStorage:'',
     phone:'',
     role:'',
-    // avator:defaultImg,
+    avator:defaultImg,
 }
 
 export const user = createSlice({
     name:"user",
     initialState,
     reducers:{
-        setName(){
-
-        }
+        setName: (state, action) => {
+            state.name = action.payload;
+        },
     }
 })
+
+export const {setName} = user.actions;
+
+export default user.reducer;

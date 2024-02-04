@@ -1,9 +1,12 @@
 import './header.scss'
-import { Link,NavLink } from 'react-router-dom'
-import {Button} from 'antd'
-import {MessageOutlined} from '@ant-design/icons';
+import { Link, NavLink } from 'react-router-dom'
+import { Button } from 'antd'
+import { MessageOutlined } from '@ant-design/icons';
+import { useSelector } from 'react-redux'
 
 function Header() {
+    const user = useSelector((state) => state.user);
+
     const navTopLeftOptions = [
         { name: '首页', link: '/' },
         { name: '专家咨询', link: '/' },
@@ -13,6 +16,7 @@ function Header() {
     const navTopRightOptions = [
         { name: '免费注册', link: '/register' },
         { name: '登录', link: '/login' },
+        { name: user.name || '请先登录', link: '/my' },
     ];
     const navBottomOptions = [
         { name: '首页', link: '/' },

@@ -5,11 +5,20 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import showMessage from '@/components/message';
 import { toLogin } from '@/api/login.js'
 import { goto } from '@/api';
-import { useEffect } from 'react';
-import { passwordEncryption } from '@/utils/jsencrypt.js'
+
+import { useEffect, useState } from 'react';
+import JSEncrypt from 'jsencrypt';
+import { getPublicKey } from '@/api/login';
 
 function LoginUsername() {
     const [form] = Form.useForm();
+    const [rememberChecked, setRememberChecked] = useState(false); // 控制 Checkbox 的选中状态
+    // useEffect(() => {
+    //     if (localStorage.getItem('remember') !== rememberChecked) {
+    //         form.setFieldsValue({ 'remember': rememberChecked });
+    //     }
+    // }, [rememberChecked])
+
     useEffect(() => {
         if (localStorage.getItem('remember')) {
             form.setFieldsValue({
@@ -19,14 +28,22 @@ function LoginUsername() {
                 remember: true,
             });
         }
-    },[]);
 
-    const onFinish = async(values) => {
-        // const enPassword = await passwordEncryption(values.password);
+    }, []);
+
+    const onFinish = async (values) => {
+        let enPassword;
+        const encrypt = new JSEncrypt();
+        await getPublicKey().then((res) => {
+            const publicKey = res.msg;
+            encrypt.setPublicKey(publicKey)
+            enPassword = encrypt.encrypt(values.password)
+        }).catch(err => console.log(err))
+
         toLogin({
             "role": values.role,
             "phone": values.username,
-            "password": /* enPassword */values.password,
+            "password": enPassword,
         }).then(res => {
             if (res.code === 200) {
                 showMessage({ type: 'success', content: '登录成功！' });
@@ -34,6 +51,7 @@ function LoginUsername() {
                 localStorage.setItem('tokenStorage', res.data.token)
                 //判断 “记住密码”
                 if (values.remember) {
+                    setRememberChecked(true);
                     localStorage.setItem("username", values.username);
                     localStorage.setItem("password", values.password);
                     localStorage.setItem("remember", values.remember);
@@ -114,7 +132,9 @@ function LoginUsername() {
 
                 <Form.Item name="remember" valuePropName="checked" noStyle>
                     <div>
-                        <Checkbox>记住密码</Checkbox>
+                        <Checkbox onChange={(e) => setRememberChecked(e.target.checked)}>
+                            记住密码
+                        </Checkbox>
                         <a className="login-form-forgot">
                             忘记密码
                         </a>
