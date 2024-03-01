@@ -38,6 +38,7 @@ export const authRequest = (url, method, data = {}) => {
             method,
             data,
             headers: {
+                // 'Authorization': `Bearer ${authToken}`,
                 'Authorization': `Bearer ${authToken}`,
                 'Content-Type': 'application/json',
             },

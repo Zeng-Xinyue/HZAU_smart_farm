@@ -8,9 +8,9 @@ function Main(){
     return (
         <div className="P-main">
                 <MainSpan1></MainSpan1>
-                <HotQuestions></HotQuestions>
+                {/* <HotQuestions></HotQuestions> */}
                 <ExpertsRecommend></ExpertsRecommend>
-                <KnowledgePopularization></KnowledgePopularization>
+                {/* <KnowledgePopularization></KnowledgePopularization> */}
         </div>
     )
 }

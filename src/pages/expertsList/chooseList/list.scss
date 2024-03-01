@@ -1,0 +1,23 @@
+.P-list {
+    width: 60vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    .P-list-item {
+        width: 10vw;
+        height: 5vh;
+        margin-right: 3vw;
+        margin-bottom: 3vh;
+
+        .P-list-item-name {
+            height: 6vh;
+            line-height: 6vh;
+            text-align: center;
+        }
+    }
+}

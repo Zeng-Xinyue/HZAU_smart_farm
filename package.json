@@ -12,21 +12,18 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.12.5",
-<<<<<<< HEAD
-    "axios": "^1.6.3",
-    "classnames": "^2.5.1",
-=======
     "antd-img-crop": "^4.21.0",
     "axios": "^1.6.3",
     "classnames": "^2.5.1",
     "git": "^0.1.5",
->>>>>>> 9005482 ('zxy新版本')
     "http-proxy-middleware": "^2.0.6",
     "jsencrypt": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "socket.io-client": "^4.7.4",
+    "websocket": "^1.0.34"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

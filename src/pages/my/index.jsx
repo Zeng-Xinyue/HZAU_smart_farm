@@ -1,7 +1,7 @@
 import './my.scss'
 import { useState } from 'react';
-import {  Avatar,Col,Image, Modal , Row,Typography,Divider,Button,Menu,Drawer,Space  } from 'antd'
-import { UserOutlined,MailOutlined,AppstoreOutlined,PlusOutlined } from '@ant-design/icons';
+import {  Col,Image, Modal , Row,Typography,Divider,Button,Menu,Drawer } from 'antd'
+import { MailOutlined,AppstoreOutlined,PlusOutlined } from '@ant-design/icons';
 import Userinfo from './components/userinfo'
 const { Title,Text,Paragraph } = Typography;
 
@@ -14,17 +14,26 @@ function My () {
       {tip}<Divider type="vertical"/>
     </Text>
   );
-
-  const onClick = (e) => {
-    console.log('click ', e);
-    maininfo=<div className='M-maininfo'>
-    <Title level={4}>{e}</Title>
+  const [maininfo, setMainInfo] = useState((
+    <div className='M-maininfo'>
+    <Title level={4}>1</Title>
     <Divider />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
       probare, quae sunt a te dicta? Refert tamen, quo modo.
     </p>
-    </div>
+    </div>));
+
+  const onClick = (e) => {
+    console.log('click ', e);
+    setMainInfo(<div className='M-maininfo'>
+    <Title level={4}>{e.key}</Title>
+    <Divider />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
+      probare, quae sunt a te dicta? Refert tamen, quo modo.
+    </p>
+    </div>);
   };
   function getItem(label, key, icon, children, type) {
     return {
@@ -45,15 +54,7 @@ function My () {
       getItem('我的收藏', '6'),
       getItem('预留字段', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
     ])]
-    let maininfo=
-    <div className='M-maininfo'>
-    <Title level={4}>标题</Title>
-    <Divider />
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
-      probare, quae sunt a te dicta? Refert tamen, quo modo.
-    </p>
-    </div>
+
 
 //修改个人资料
   const [open, setOpen] = useState(false);

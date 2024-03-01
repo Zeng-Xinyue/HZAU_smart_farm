@@ -10,6 +10,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+      '/websocket': {
+        target: 'ws://124.221.104.7:12006', // WebSocket服务器地址
+        changeOrigin: true,
+        ws: true,
+      },
     },
   },
   resolve: {

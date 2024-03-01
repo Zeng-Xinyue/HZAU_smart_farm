@@ -9,3 +9,7 @@ export const toLogin = (body)=> {
 export const getPublicKey = ()=> {
     return get('/getPublicKey')
 }
+//获取用户信息，判断登录状态
+export const getInfo = (body)=> {
+    return authRequest('/get_info_by_token','post',body)
+}

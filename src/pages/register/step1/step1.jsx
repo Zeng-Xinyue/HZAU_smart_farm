@@ -18,19 +18,19 @@ function Step1(props) {
             name: '农场主',
             img: defaultImg,
             introText: '222222222',
-            btnText:'我是农场主'
+            btnText:'农场主认证'
         },
         {
             name: '专家',
             img: expertImg,
             introText: '333333333',
-            btnText:'我是专家'
+            btnText:'专家认证'
         },
         {
-            name: '4',
+            name: '公司',
             img: defaultImg,
-            introText: '44444444',
-            btnText:'成为用户'
+            introText: '农服...',
+            btnText:'公司账号认证'
         }
     ];
     //处理按钮点击事件

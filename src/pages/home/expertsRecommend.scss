@@ -1,5 +1,5 @@
 .P-experts-recommend {
-    height: 90vh;
+    height: 70vh;
     padding: 4vh 0;
     background-color: #f2f2f2;
 }
@@ -17,7 +17,7 @@
 }
 
 .P-experts-recommend-list {
-    height: 65vh;
+    height: 50vh;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -25,14 +25,14 @@
 }
 
 .P-experts-recommend-item {
-    width: 17vw;
-    height: 65vh;
+    width: 15vw;
+    height: 50vh;
     text-align: center;
     position: relative;
 
     .P-experts-recommend-item-avator-img {
         display: block;
-        height: 40vh;
+        height: 30vh;
         margin: 0 auto;
     }
 

@@ -136,14 +136,14 @@ function MainSpan1() {
                             </div>
                             <div className='P-span1-right-bottom-inco-item'>
                                 <CheckCircleOutlined />
-                                <span>平台认证</span>
+                                <span>行业认证</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='P-span1-bottom'>
                     <img className='P-span1-bottom-left' src={fenghuaImg} />
-                    <div className='P-span1-bottom-right-tit'>示范农场——<span style={{fontSize:'2.8vh'}} >丰华现代农业开发有限公司</span></div>
+                    <div className='P-span1-bottom-right-tit'>示范农场: <Link style={{fontSize:'2.8vh'}} >丰华现代农业开发有限公司</Link></div>
                     <div className='P-span1-bottom-right-text'>2008年起至今连年被授于武汉市农业产业化重点龙头企业，全国绿色食品（疏菜）基地试验区、全国芦笋种植基地示范区、首批“创业天使导师团”成员、湖北省休闲旅游示范点、湖北省五星级农家乐、 2016年中部休闲农业与乡村旅游发展论坛组委会评选 湖北省“十佳示范农庄”，是华中农业大学实验基地、湖北工业大学教学基地，武汉农村商业银行重点扶持单位。2022年丰华公司将打造武汉市最佳沉浸式体验生态农业园。</div>
                 </div>
             </div>

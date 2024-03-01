@@ -12,6 +12,7 @@ import Step1 from '@/pages/register/step1/step1';
 import Step2 from '@/pages/register/step2/step2';
 import Step3 from '@/pages/register/step3/step3';
 import Step2PerUser from '@/pages/register/step2/step2PerUser'
+import ExpertList from '@/pages/expertsList';
 
 // 全局路由
 export const globalRouters = createHashRouter([
@@ -30,10 +31,14 @@ export const globalRouters = createHashRouter([
             {
               path: '/my',
               element: <My></My>
-          },
+            },
             {
                 path: '/quick_consultation',
                 element: <QuickConsultation></QuickConsultation>
+            },
+            {
+                path: '/expert_list',
+                element: <ExpertList></ExpertList>
             },
             {
                 path: '/login',

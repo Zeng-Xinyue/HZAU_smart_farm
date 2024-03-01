@@ -1,0 +1,40 @@
+.P-sort {
+    width: 20vw;
+    min-height: 80vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .P-sort-tit {
+        font-size: 3vh;
+    }
+
+    .P-sort-List1 {
+        font-size: 1.6vh;
+        display: flex;
+
+        .P-sort-List1-tit {
+            width: 5vw;
+            height: 10vh;
+            line-height: 10vh;
+        }
+
+        .P-sort-List1-item {
+            width: 5vw;
+            height: 10vh;
+            line-height: 10vh;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(43, 142, 240);
+            }
+            .P-list-item-name{
+                text-align: center;
+            }
+        }
+
+        .actived {
+            color: rgb(43, 142, 240);
+        }
+    }
+}
